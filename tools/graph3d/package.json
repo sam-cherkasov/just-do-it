@@ -1,0 +1,11 @@
+{
+  "name": "personal-os-graph3d",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "build": "esbuild src/renderer.js --bundle --minify --format=iife --global-name=PersonalOs3D --target=es2020 --legal-comments=eof --outfile=../../web/vendor/graph3d.bundle.js",
+    "test": "node --test ../../tests/graph-model.test.cjs"
+  },
+  "dependencies": { "three": "0.186.1" },
+  "devDependencies": { "esbuild": "0.28.2" }
+}

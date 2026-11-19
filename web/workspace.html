@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Моё пространство</title>
+  <link rel="stylesheet" href="/workspace.css">
+  <script defer src="/i18n-catalog.js"></script><script defer src="/i18n.js"></script><script defer src="/workspace-refresh.js"></script>
+  <script defer src="/today-model.js"></script>
+  <script defer src="/workspace.js"></script>
+  <script defer src="/today.js"></script>
+  <script defer src="/work-items.js"></script>
+  <script defer src="/onboarding.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">К содержимому</a>
+  <aside class="sidebar">
+    <a class="brand" href="#today"><span class="brand-icon" aria-hidden="true">◒</span><span>Моё<br> пространство</span></a>
+    <nav aria-label="Основная навигация"><a href="#today" data-nav="today">Сегодня</a><a href="#home" data-nav="home">Направления</a><a href="#tasks" data-nav="tasks">Задачи</a><a href="#weeks" data-nav="weeks">Неделя</a><a href="#focus" data-nav="focus">В работе <span id="active-dot" aria-hidden="true"></span></a><a href="#inbox" data-nav="inbox">Входящие</a><a href="#history" data-nav="history">Итоги сессий</a></nav>
+    <div class="side-caption">Мои направления</div><nav id="projects-nav" aria-label="Направления работы"></nav>
+    <div class="sidebar-bottom"><a href="#connection" data-nav="connection">Подключение чатов</a><p>Выбери один вопрос.<br>Остальное подождёт.</p></div>
+  </aside>
+  <main id="main" tabindex="-1">
+    <header class="topbar"><span id="current-date"></span><div><span data-language-switcher></span><button id="capture-thought" class="secondary" type="button">Записать мысль</button><span id="freshness"></span><button id="refresh" class="quiet" type="button">Обновить</button></div></header>
+    <div id="notice" role="status" aria-live="polite"></div>
+    <div id="sync-status" class="sync-status" role="status" aria-live="polite"></div>
+    <div id="page"><p class="loading">Собираем твоё пространство…</p></div>
+    <footer>Записи сохраняются на твоём компьютере. Подключение чатов и календаря настраивается отдельно.</footer>
+  </main>
+  <dialog id="session-dialog" aria-labelledby="session-title"><form id="session-form"><div class="dialog-top"><h2 id="session-title">Одна рабочая сессия</h2><button type="button" id="dismiss" class="quiet" aria-label="Закрыть">✕</button></div><p id="session-task"></p><p id="session-first-action" class="hint"></p><label>Какой результат хочешь получить?<textarea id="target" rows="3" maxlength="2000" required></textarea></label><label>Сколько времени выделишь?<select id="minutes"><option value="30">30 минут</option><option value="45">45 минут</option><option value="60" selected>1 час</option><option value="90">1,5 часа</option><option value="120">2 часа</option></select></label><p class="hint">Это твой ориентир на сессию. В календаре ничего не бронируется.</p><button class="primary" id="start-session">Начать сессию</button></form></dialog>
+  <dialog id="action-dialog" aria-labelledby="action-title"></dialog>
+</body>
+</html>
