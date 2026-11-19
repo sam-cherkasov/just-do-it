@@ -6,3 +6,7 @@
 .life-graph{position:relative;display:grid;gap:36px;padding:8px 0 24px}.graph-layer{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;position:relative;z-index:1}.graph-node{display:block;flex:1 1 140px;max-width:270px;min-width:0;background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:16px;text-decoration:none;overflow-wrap:anywhere}.graph-node:hover{border-color:var(--teal)}.graph-node strong{display:block;font-size:16px;font-weight:600;color:var(--ink)}.graph-node .small{display:block;margin-top:7px;color:var(--teal)}.graph-lines{position:absolute;width:100%;height:100%;pointer-events:none;overflow:visible}.graph-lines path{fill:none;stroke:var(--line);stroke-width:1.5}
 @media(max-width:1100px){.task-board{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:750px){.focus-grid,.task-board{grid-template-columns:minmax(0,1fr)}}
+
+/* Select: one custom chevron with consistent inset instead of the native arrow glued to the edge */
+html select:not([multiple]):not([size]) { -webkit-appearance:none; appearance:none; background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12' fill='none'%3E%3Cpath d='M3 4.5 6 7.5 9 4.5' stroke='%236b7080' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E"); background-repeat:no-repeat; background-position:right 12px center; background-size:12px 12px; padding-right:34px; }
+html select:not([multiple]):not([size])::-ms-expand { display:none; }
