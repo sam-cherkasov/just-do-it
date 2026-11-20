@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; img-src data:; connect-src 'none'; form-action 'none'; base-uri 'none'">
+  <title>Personal OS · Life map</title>
+  <style>/* INLINE_STYLE */</style>
+</head>
+<body>
+  <a class="skip" href="#content">Skip to content</a>
+  <aside class="rail">
+    <a class="brand" href="#overview"><span class="brand-mark" aria-hidden="true">◉</span> Personal OS</a>
+    <p class="rail-description">A place to see where you are<br>and what comes next.</p>
+    <nav aria-label="Main navigation">
+      <a href="http://127.0.0.1:8770">Моё пространство</a>
+      <a href="http://127.0.0.1:8769">Manual planner</a>
+      <a href="#overview" data-tab="overview">Life map</a>
+      <a href="#tasks" data-tab="tasks">Task board</a>
+      <a href="#sources" data-tab="sources">Project sources</a>
+      <a href="#diary" data-tab="diary">Diary</a>
+      <a href="#memory" data-tab="memory">What I know</a>
+      <a href="#feedback" data-tab="feedback">Pilot feedback</a>
+    </nav>
+    <div class="conversation-hint"><strong>Keep talking naturally.</strong><p>Plan, add a note, or correct something in your Personal OS conversation. Ask to refresh this view after changes.</p></div>
+  </aside>
+  <main id="content" tabindex="-1">
+    <header class="topline"><span id="freshness"></span></header>
+    <div id="page"></div>
+    <footer>Read-only snapshot. Missing updates mean unknown, never failure. <span id="environment"></span><span id="revision"></span></footer>
+  </main>
+  <dialog id="inspector" aria-labelledby="inspector-title">
+    <button id="close-inspector" class="close">Close</button>
+    <div id="inspector-content"></div>
+  </dialog>
+  <script type="application/json" id="snapshot">__SNAPSHOT_JSON__</script>
+  <script>/* INLINE_GRAPH_MODEL */</script>
+  <script>/* INLINE_GRAPH_3D */</script>
+  <script>/* INLINE_LIFE_MAP */</script>
+  <script>/* INLINE_SCRIPT */</script>
+</body>
+</html>
